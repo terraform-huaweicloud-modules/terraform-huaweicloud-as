@@ -13,7 +13,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ## Pull Request Process
 
-1. Update README.md with the details of the changes, including example hcl blocks and [example files](./examples), if
+1. Update README.md with the details of the changes, including example hcl blocks and [example files](../examples), if
    appropriate.
 2. Once all open comments and all checklist items are resolved, your contributions will be merged! The merged PR will be
    included in the next release. The terraform-huaweicloud-as maintainers are responsible for updating the CHANGELOG when they
@@ -38,6 +38,4 @@ To generate changelog, Pull Requests or Commits must have semantic and must foll
 - `ci:` for CI purpose
 - `chore:` for chores stuff
 - `style:` for style adjustments for documents or scripts
-
-The `chore` prefix skipped during changelog generation. It can be used for `chore: update changelog` commit message by
-example.
+- `changelog:` for the release records
