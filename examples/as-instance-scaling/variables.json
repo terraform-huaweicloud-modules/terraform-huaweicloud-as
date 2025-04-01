@@ -1,0 +1,72 @@
+{
+  "security_group_name": "test-sg-name",
+  "vpc_name": "test-vpc-name",
+  "vpc_cidr": "192.168.0.0/16",
+  "subnets_configuration": [
+    {
+      "name": "test-subnet-name",
+      "cidr": "192.168.0.0/24",
+      "gateway_ip": "192.168.0.1"
+    }
+  ],
+  "instance_flavor_cpu_core_count": 4,
+  "instance_flavor_memory_size": 8,
+  "instance_image_os_type": "CentOS",
+  "instance_image_architecture": "x86",
+  "instance_name": "ecs-test-module",
+  "instance_disks_configuration": [
+    {
+      "is_system_disk": true,
+      "type": "SSD",
+      "size": 200
+    }
+  ],
+  "configuration_name": "test-configuration-name",
+  "configuration_disk": [
+    {
+      "size": 40,
+      "volume_type": "SSD",
+      "disk_type": "SYS"
+    }
+  ],
+  "configuration_public_ip": [
+    {
+      "eip": [
+        {
+          "ip_type": "5_bgp",
+          "bandwidth": [
+            {
+              "size": 10,
+              "share_type": "PER",
+              "charging_mode": "traffic"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "configuration_user_data": "test-user-data",
+  "configuration_metadata": {
+    "some_key": "some_value"
+  },
+  "group_name": "test-group-name",
+  "group_min_instance_number": 0,
+  "group_max_instance_number": 2,
+  "group_desire_instance_number": 1,
+  "group_delete_instances": "yes",
+  "group_source_dest_check": false,
+  "policy_name": "test-policy-name",
+  "policy_type": "SCHEDULED",
+  "policy_scaling_policy_action": [
+    {
+      "operation": "ADD",
+      "instance_number": 1
+    }
+  ],
+  "policy_scheduled_policy": [
+    {
+      "launch_time": "2099-12-22T12:00Z"
+    }
+  ],
+  "policy_action": "pause"
+}
